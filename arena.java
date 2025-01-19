@@ -1,7 +1,9 @@
-public class arena {
+public class Arena {
     public static void main(String[] args) {
-        String greet = "Hello!";
+        String second = "95";
 
-        System.out.println("greeting not contains 'oll': " + !greet.contains("oll"));
+        String[] sArr = second.split("");
+
+        System.out.println(sArr[0] + "," + sArr[1]);
     }
 }

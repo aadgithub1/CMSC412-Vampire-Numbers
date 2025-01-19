@@ -7,7 +7,7 @@ public class Main {
         //vampires: 102510, 105210, 105264
         //non-vampires: 100052, 101259, 104125
         int i;
-        for(i = 1000; i < 10000; i++){
+        for(i = 100000; i < 1000000; i++){
             int divisor;
             for(divisor = 2; divisor < i; divisor++){
                 boolean isVampire = false;
@@ -16,9 +16,6 @@ public class Main {
                     String iStr = Integer.toString(i);
                     String divStr = Integer.toString(divisor);
                     String resStr = Integer.toString(result);
-
-                    // ***ERROR CHECK*** System.out.println(iStr + " " + divStr + " " + resStr);
-
                     if (divStr.length() == resStr.length()) {
                         String[] divCharArray = divStr.split("");
                         String[] resCharArray = resStr.split("");
@@ -36,6 +33,9 @@ public class Main {
                             }
 
                             if(k == divStr.length()-1){
+                                if(divStr.endsWith("0") && resStr.endsWith("0")){
+                                    break;
+                                }
                                 System.out.println(i + " w/ fangs: " + divStr + " & " + resStr);
                                 isVampire = true;
                             }

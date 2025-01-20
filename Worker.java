@@ -13,14 +13,8 @@ public class Worker extends Thread{
         for(i = 100000; i < 1000000; i++){
             if(i % 2 == 0 && isEven){
                 findVampireNumbers(i);
-            } else if(i % 2 == 1 && isEven) {
-                continue;
             } else if(i % 2 == 1 && !isEven){
                 findVampireNumbers(i);
-            } else if(i % 2 == 0 && !isEven){
-                continue;
-            } else{
-                System.out.println("no condition hit");
             }
         }
     }

@@ -7,14 +7,11 @@ public class Main {
         Worker thread2 = new Worker(false);
 
         thread.start();
-        long t1Start = System.currentTimeMillis();
         thread2.start();
 
         try{
             thread.join();
             thread2.join();
-            long end = System.currentTimeMillis();
-            System.out.println("time: " + (end - t1Start));
         } catch(Exception e){
             e.printStackTrace();
         }

@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Worker extends Thread{
-    boolean isEven;
+    public boolean isEven;
+    public int vampireCounter = 0;
     
     public Worker(boolean isEven){
         this.isEven = isEven;
@@ -19,7 +20,7 @@ public class Worker extends Thread{
         }
     }
 
-    static void findVampireNumbers(int i){
+    public void findVampireNumbers(int i){
         int divisor;
         for(divisor = 100; divisor < 1000; divisor++){
             boolean isVampire = false;
@@ -31,7 +32,10 @@ public class Worker extends Thread{
                 if (divStr.length() == resStr.length()) {
                     String[] divCharArray = divStr.split("");
                     String[] resCharArray = resStr.split("");
-                    ArrayList<String> iStrArrayList = new ArrayList<>(Arrays.asList(iStr.split("")));
+
+                    ArrayList<String> iStrArrayList =
+                    new ArrayList<>(Arrays.asList(iStr.split("")));
+                    
                     for(int k = 0; k < divStr.length(); k++){
                         if(iStrArrayList.contains(divCharArray[k])){
                             iStrArrayList.remove(divCharArray[k]);
@@ -48,7 +52,12 @@ public class Worker extends Thread{
                             if(divStr.endsWith("0") && resStr.endsWith("0")){
                                 break;
                             }
-                            System.out.println(i + " w/ fangs: " + divStr + " & " + resStr);
+                            if(isEven){
+                                System.out.println("Even worker found " + i + " w/ fangs: " + divStr + " & " + resStr);
+                            } else if(!isEven){
+                                System.out.println("Odd worker found " + i + " w/ fangs: " + divStr + " & " + resStr);
+                            }
+                            vampireCounter++;
                             isVampire = true;
                         }
                     }

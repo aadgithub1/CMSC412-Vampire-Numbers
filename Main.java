@@ -12,6 +12,12 @@ public class Main {
         try{
             thread.join();
             thread2.join();
+
+            System.out.println(
+            "There are " +
+            (thread.vampireCounter + thread2.vampireCounter) +
+            " total vampire numbers.");
+
         } catch(Exception e){
             e.printStackTrace();
         }

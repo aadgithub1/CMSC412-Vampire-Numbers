@@ -9,7 +9,7 @@ public class Main {
         int i;
         for(i = 100000; i < 1000000; i++){
             int divisor;
-            for(divisor = 2; divisor < i; divisor++){
+            for(divisor = 100; divisor < 1000; divisor++){
                 boolean isVampire = false;
                 if (i % divisor == 0) {
                     int result = i / divisor;

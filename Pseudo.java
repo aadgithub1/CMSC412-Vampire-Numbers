@@ -17,17 +17,20 @@ public class Pseudo {
                                 //print not a vampire number
                                 //break
 
-                                //iStr = 5775
-                                //iStrArray = iStr.toCharArray()
-                                //iStrArray = ["5", "7", "7", "5"]
-                                //divCharArray = ["7", "5"]
-                                //resCharArry = ["7", "7"]
+                                //prob: we want to not strike a number when it is used
+                                //so we do not get too many hits because both
+                                //factors are using the same numbers
 
-                                //we want to not strike a number when it is used
+                                    //iStr = 5775
+                                    //iStrArray = iStr.toCharArray()
+                                    //iStrArray = ["5", "7", "7", "5"]
+                                    //divCharArray = ["7", "5"]
+                                    //resCharArry = ["7", "7"]
 
                                     //see if divCharArray[0] is in iStrArray
                                     //if so remove divCharArray[0] from iStrArray
                                     //if not exit loop continue to next divisor
+                                        //there is a factor digit not contained
 
                                     //see if resCharArray[0] is in iStrArray
                                     //if so remove resCharArray[0] from iStrArray

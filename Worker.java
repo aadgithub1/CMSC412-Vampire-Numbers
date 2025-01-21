@@ -23,7 +23,7 @@ public class Worker extends Thread{
         }
     }
 
-    //test for vampire number; pseudocode/comments in Pseudo.java
+    //test for vampire number; pseudocode/comments in resources/Pseudo.java
     public void findVampireNumbers(int i){
         int divisor;
         for(divisor = 100; divisor < 1000; divisor++){ //factors have to be 3

@@ -1,3 +1,4 @@
+package resources;
 public class Pseudo {
     public static void main(String[] args) {
         //vampires: 102510, 105210, 105264

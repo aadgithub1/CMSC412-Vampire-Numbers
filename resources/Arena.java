@@ -1,3 +1,4 @@
+package resources;
 public class Arena {
     public static void main(String[] args) {
         //proving key concepts in Java syntax
